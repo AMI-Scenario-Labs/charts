@@ -1,0 +1,26 @@
+apiVersion: v1
+entries:
+  traderlite:
+  - apiVersion: v2
+    created: "2020-12-07T16:17:56.7433-05:00"
+    dependencies:
+    - alias: tradeTransactionalDB
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami/
+      version: 7.4.2
+    - alias: tradeHistoryDB
+      name: mongodb
+      repository: https://charts.bitnami.com/bitnami/
+      version: 7.4.2
+    - condition: kafkaIntegration.enabled
+      name: kafkaConnect
+      repository: file://kafkaConnect
+      version: 1.0.0
+    description: A Helm chart for TraderLite Application for AMI Tech Jam
+    digest: 9ef85f3eca2d0246000e26c4eb020da2b13c6abbaf0125cfe2c17756814d0b22
+    name: traderlite
+    type: application
+    urls:
+    - https://amilab-charts.cloudpakintegration.io/traderlite-1.0.3.tgz
+    version: 1.0.3
+generated: "2020-12-07T16:17:56.733028-05:00"
